@@ -11,3 +11,5 @@ vagrant up
 The VM is configured so that the Activiti application is forwarded to your machine on port 8080.
 
 To check out the activiti-explorer application navigate to [http://localhost:8080/activiti-explorer](http://localhost:8080/activiti-explorer).
+
+To log in, select the user account shown in [2.2 Activiti setup](http://www.activiti.org/userguide/).
