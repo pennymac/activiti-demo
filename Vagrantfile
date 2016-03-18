@@ -69,20 +69,20 @@ Vagrant.configure(2) do |config|
     sudo apt-get install -y openjdk-7-jre
     sudo apt-get install -y openjdk-7-jdk
 
-    wget http://apache.go-parts.com/tomcat/tomcat-8/v8.0.24/bin/apache-tomcat-8.0.24.zip
-    unzip apache-tomcat-8.0.24.zip -d /opt
-    ln -s /opt/apache-tomcat-8.0.24 /opt/tomcat
+    wget http://apache.go-parts.com/tomcat/tomcat-8/v8.0.24/bin/apache-tomcat-8.0.32.zip
+    unzip apache-tomcat-8.0.32.zip -d /opt
+    ln -s /opt/apache-tomcat-8.0.32 /opt/tomcat
 
     groupadd tomcat
     useradd -g tomcat -s /usr/sbin/nologin -m -d /home/tomcat tomcat
-    chown -R tomcat:tomcat /opt/apache-tomcat-8.0.24
+    chown -R tomcat:tomcat /opt/apache-tomcat-8.0.32
 
     echo 'export CATALINA_HOME=/opt/tomcat' >> /etc/profile
     echo 'export CATALINA_BASE=/opt/tomcat' >> /etc/profile
 
-    wget https://github.com/Activiti/Activiti/releases/download/activiti-5.18.0/activiti-5.18.0.zip
-    unzip activiti-5.18.0.zip -d /opt
-    ln -s /opt/activiti-5.18.0 /opt/activiti
+    wget https://github.com/Activiti/Activiti/releases/download/5.19.0.2/activiti-5.19.0.2.zip
+    unzip activiti-5.19.0.2.zip -d /opt
+    ln -s /opt/activiti-5.19.0.2 /opt/activiti
 
     cp /opt/activiti/wars/activiti-explorer.war /opt/tomcat/webapps
     cp /opt/activiti/wars/activiti-rest.war /opt/tomcat/webapps
